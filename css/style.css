@@ -1,0 +1,174 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+.wrap{
+  box-shadow: 0 2px 2px lightgray;
+  display: grid;
+  grid-template-columns: 250px 500px 250px;
+  grid-row: 1;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo.item a{
+  display: grid;
+  grid-template-columns: 70px 180px;
+  justify-content: start;
+  align-items: center;
+  text-decoration: none;
+  list-style: none;
+  margin-left: 40px;
+}
+.logo.item .title{
+
+}
+.title{
+  margin-left: -20px;
+  font-size: 30px;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #FF5000;
+}
+.search.item input{
+  border: 1px solid lightgray;
+  border-radius: 20px;
+  height: 30px;
+  width: 100%;
+  text-align: center;
+  background-image: url(../image/icon-lupa.png);
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-position: 100px;
+}
+.profile.item{
+  display: grid;
+  grid-template-columns: 120px 40px 30px;
+  justify-content: center;
+}
+.profile.item h3{
+  align-self: center;
+}
+.profile.item .avatar{
+  border: 2px solid #FE2D00;
+  border-radius: 50%;
+  margin: 10px 0;
+}
+.profile.item a img{
+  margin: 10px;
+  margin-top: 20px;
+}
+
+/* Comienza el contenido principal de la pagina */
+
+/* sidebar */
+.main-content{
+  display: grid;
+  grid-template-columns: 150px auto;
+}
+.menu{
+  background: linear-gradient(to right, #FF2800, #FF6400);
+  display: grid;
+  text-align: center;
+  justify-content: center;
+  grid-template-rows: repeat(4, 100px);
+  padding-top: 30px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.menu a{
+  color: white;
+  text-decoration: none;
+  list-style: none;
+}
+.menu .settings{
+  grid-row-end: 11;
+}
+
+/* catalog */
+
+.catalog{
+  display: grid;
+  grid-template-columns: repeat(3, 170px);
+  grid-template-areas: "category1 . ."
+                       "post1 post2 post3"
+                       "category2 . ."
+                       "post4 post5 post6"
+                       "category3 . ."
+                       "post7 post8 post9";
+  justify-content: space-around;
+}
+.catalog .post{
+  justify-self: center;
+  position: relative;
+  cursor: pointer;
+}
+.catalog .post:hover{
+  transition: .5s ease-in-out;
+  transform: scale(1.1);
+}
+.catalog .category1{
+  grid-area: category1;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  margin-top: 40px;
+  margin-bottom: 7px;
+}
+.catalog .category2{
+  grid-area: category2;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  margin-top: 40px;
+  margin-bottom: 7px;
+}
+.catalog .category3{
+  grid-area: category3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  margin-top: 40px;
+  margin-bottom: 7px;
+}
+.catalog .post1{
+  grid-area: post1;
+}
+.catalog .post2{
+  grid-area: post2;
+}
+.catalog .post3{
+  grid-area: post3;
+}
+.catalog .post4{
+  grid-area: post4;
+}
+.catalog .post5{
+  grid-area: post5;
+}
+.catalog .post6{
+  grid-area: post6;
+}
+.catalog .post7{
+  grid-area: post7;
+}
+.catalog .post8{
+  grid-area: post8;
+}
+.catalog .post9{
+  grid-area: post9;
+}
+.catalog h2{
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+}
+.catalog h3{
+  font-size: 14px;
+}
+.post img{
+  position: relative;
+}
+.post .description{
+  background: rgba(255, 80, 7, .9);
+  height: 80px;
+  position: absolute;
+  bottom: 4px;
+  width: 170px;
+  text-align: center;
+  color: white;
+}
