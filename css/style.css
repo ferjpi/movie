@@ -85,90 +85,28 @@ body{
 
 /* catalog */
 
-.catalog{
+.catalog {
   display: grid;
-  grid-template-columns: repeat(3, 170px);
-  grid-template-areas: "category1 . ."
-                       "post1 post2 post3"
-                       "category2 . ."
-                       "post4 post5 post6"
-                       "category3 . ."
-                       "post7 post8 post9";
-  justify-content: space-around;
+  grid-template-rows: repeat(3, 1fr) ;
+  overflow: auto;
 }
-.catalog .post{
-  justify-self: center;
-  position: relative;
-  cursor: pointer;
+.catalog__category {
+  display: grid;
+  grid-template-rows: 50px 50px 1fr;
 }
-.catalog .post:hover{
-  transition: .5s ease-in-out;
-  transform: scale(1.1);
-}
-.catalog .category1{
-  grid-area: category1;
-  grid-column-start: 1;
-  grid-column-end: 3;
-  margin-top: 40px;
-  margin-bottom: 7px;
-}
-.catalog .category2{
-  grid-area: category2;
-  grid-column-start: 1;
-  grid-column-end: 3;
-  margin-top: 40px;
-  margin-bottom: 7px;
-}
-.catalog .category3{
-  grid-area: category3;
-  grid-column-start: 1;
-  grid-column-end: 3;
-  margin-top: 40px;
-  margin-bottom: 7px;
-}
-.catalog .post1{
-  grid-area: post1;
-}
-.catalog .post2{
-  grid-area: post2;
-}
-.catalog .post3{
-  grid-area: post3;
-}
-.catalog .post4{
-  grid-area: post4;
-}
-.catalog .post5{
-  grid-area: post5;
-}
-.catalog .post6{
-  grid-area: post6;
-}
-.catalog .post7{
-  grid-area: post7;
-}
-.catalog .post8{
-  grid-area: post8;
-}
-.catalog .post9{
-  grid-area: post9;
-}
-.catalog h2{
-  font-family: 'Lato', sans-serif;
-  font-weight: 700;
-}
-.catalog h3{
+.catalog__catergory__topic {
+  margin: 15px;
   font-size: 14px;
+  font-weight: 300;
+  color: #888B8E;
 }
-.post img{
-  position: relative;
+.catalog__category__title {
+  margin: 15px;
+  color: #3F546C;
+  font-size: 20px;
+  font-weight: 400;
 }
-.post .description{
-  background: rgba(255, 80, 7, .9);
-  height: 80px;
-  position: absolute;
-  bottom: 4px;
-  width: 170px;
-  text-align: center;
-  color: white;
+.catalog__category__list {
+  display: flex;
+  overflow: auto;
 }
