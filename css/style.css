@@ -3,7 +3,7 @@ body{
   padding: 0;
   font-family: 'Lato', sans-serif;
 }
-.wrap{
+.header {
   box-shadow: 0 2px 2px lightgray;
   display: grid;
   grid-template-columns: 250px 500px 250px;
@@ -20,16 +20,14 @@ body{
   list-style: none;
   margin-left: 40px;
 }
-.logo.item .title{
 
-}
 .title{
   margin-left: -20px;
   font-size: 30px;
   font-family: 'Roboto Condensed', sans-serif;
   color: #FF5000;
 }
-.search.item input{
+.search__form__input {
   border: 1px solid lightgray;
   border-radius: 20px;
   height: 30px;
@@ -39,6 +37,9 @@ body{
   background-repeat: no-repeat;
   background-size: 15px;
   background-position: 100px;
+}
+.search__form__input:focus {
+  outline: 0;
 }
 .profile.item{
   display: grid;
@@ -64,6 +65,12 @@ body{
 .main-content{
   display: grid;
   grid-template-columns: 150px auto;
+  grid-template-areas: "sidebar catalog"
+                       "sidebar featuring";
+  height: 87vh;
+}
+.main-content--search-active {
+  grid-template-rows: 1fr 200px;
 }
 .menu{
   background: linear-gradient(to right, #FF2800, #FF6400);
@@ -73,6 +80,7 @@ body{
   grid-template-rows: repeat(4, 100px);
   padding-top: 30px;
   font-family: 'Roboto Condensed', sans-serif;
+  grid-area: sidebar;
 }
 .menu a{
   color: white;
@@ -89,6 +97,7 @@ body{
   display: grid;
   grid-template-rows: repeat(3, 1fr) ;
   overflow: auto;
+  grid-area: catalog;
 }
 .catalog__category {
   display: grid;
@@ -109,4 +118,28 @@ body{
 .catalog__category__list {
   display: flex;
   overflow: auto;
+}
+
+/* featuring */
+#featuring {
+  grid-area: featuring;
+
+}
+.featuring {
+  background: linear-gradient(to right, #ff0000, #ff458b);
+  display: flex;
+  height: 100%;
+  align-items: center;
+  padding-left: 100px;
+  color: white;
+}
+.featuring-image {
+  margin-right: 20px;
+}
+.featuring-title {
+  margin: 10px;
+}
+.featuring-album {
+  margin: 10px;
+  font-size: 1.3em;
 }

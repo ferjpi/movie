@@ -11,7 +11,7 @@
 </head>
 <body>
   <!-- Comienza el encabezado -->
-  <header class="wrap container">
+  <header class="header container">
     <div class="logo item">
       <a href="index.html">
         <img src="image/cinema.png" width="50px" alt="Logo Popcorn">
@@ -19,7 +19,9 @@
       </a>
     </div>
     <div class="search item">
-      <input type="text" placeholder="find your movie, actor or actress">
+      <form action="" class="search__form" id="form">
+        <input type="text" name="name" class="search__form__input" placeholder="find your movie, actor or actress">
+      </form>
     </div>
     <div class="profile item">
       <h3>Eulices Ramos</h3>
@@ -32,7 +34,7 @@
   <!-- Termina el encabezado -->
 
   <!-- Comienza el contenido principal -->
-  <div class="main-content">
+  <div class="main-content" id="mainContent">
     <!-- Sidebar -->
     <sidebar class="menu">
       <a href="#">
@@ -55,7 +57,7 @@
     <!-- Termina sidebar -->
 
     <!-- Comienza el catalogo -->
-    <content class="catalog">
+    <content class="catalog" id="catalog">
 
       <div class="catalog__category">
         <h3 class="catalog__catergory__topic">
@@ -87,10 +89,12 @@
         </div>
       </div>
 
-
     </content>
+    <div class="home-feturing" id="featuring"></div>
     <!-- Termina el catalogo -->
   </div>
   <!-- termina el contenido principal -->
+
+  <script src="js/main.js"></script>
 </body>
 </html>
