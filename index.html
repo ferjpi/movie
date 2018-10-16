@@ -7,6 +7,7 @@
   <link rel="icon" href="image/logo_icon.ico">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Condensed:400,700" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/modal.css">
   <title>Movie</title>
 </head>
 <body>
@@ -74,7 +75,7 @@
           Para llorar
         </h3>
         <h2 class="catalog__category__title">Drama</h2>
-        <div class="catalog__category__list" id="Drama">
+        <div class="catalog__category__list" id="drama">
           <img src="image/loader.gif" width="50" height="50" alt="">
         </div>
       </div>
@@ -94,6 +95,18 @@
     <!-- Termina el catalogo -->
   </div>
   <!-- termina el contenido principal -->
+
+  <div class="overlay" id="overlay"></div>
+  <div class="modal" id="modal">
+    <h1>Titulo de pelicula</h1>
+    <div class="modal__content">
+      <img src="" alt="" width="170" height="256">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, tempore!</p>
+    </div>
+    <div class="modal__buttons">
+      <button class="modal__buttons--btn modal__buttons--primary" id="hide__modal">Cerrar Modal</button>
+    </div>
+  </div>
 
   <script src="js/main.js"></script>
 </body>

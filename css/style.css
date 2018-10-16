@@ -67,7 +67,7 @@ body{
   grid-template-columns: 150px auto;
   grid-template-areas: "sidebar catalog"
                        "sidebar featuring";
-  height: 87vh;
+  height: 89.2vh;
 }
 .main-content--search-active {
   grid-template-rows: 1fr 200px;
@@ -142,4 +142,17 @@ body{
 .featuring-album {
   margin: 10px;
   font-size: 1.3em;
+}
+
+.fadeIn {
+  animation: 5000ms fadeIn;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
